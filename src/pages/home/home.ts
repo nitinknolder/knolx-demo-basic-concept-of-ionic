@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {IonicPage, NavController} from 'ionic-angular';
+
+@IonicPage({
+  name: 'welcome-page'
+})
 
 @Component({
   selector: 'page-home',
@@ -9,6 +13,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+  navigateToAboutPage() {
+    this.navCtrl.push('lazyabout');
   }
 
 }
