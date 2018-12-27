@@ -23,12 +23,24 @@ export class AboutPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutPage');
   }
+  ionViewWillEnter() {
+    console.log('view will enter in about page');
+  }
+  ionViewWillLeave() {
+    console.log('IonViewWillLeave is fired each time the page is about to leave the about page');
+  }
+  ionViewDidLeave() {
+    console.log('IonViewDidLeave is fired when the user has left the page');
+  }
+  ionViewWillUnload() {
+    console.log('IonViewDidLeave is fired when the user unload the page');
+  }
   navigateToContactPage() {
     this.navCtrl.push('contact-page');
   }
 
   navigateToHomePage(){
-    this.navCtrl.pop('welcome-page');
+    this.navCtrl.pop();
   }
 
 }
